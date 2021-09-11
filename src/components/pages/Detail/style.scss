@@ -1,0 +1,144 @@
+$box-shadow-color-light: #b9b9b91a;
+$box-shadow-color-dark: #04050621;
+
+.detail-container {
+	padding: 30px 100px;
+	.back-btn-div {
+		padding: 20px 0 50px;
+		button {
+			box-shadow: 0px 0px 4px 4px #7b7b7b1a;
+			padding: 8px;
+			border-radius: 5px;
+			display: flex;
+			align-items: center;
+
+			span {
+				margin-left: 5px;
+			}
+		}
+	}
+}
+.detail-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.img-wrapper {
+		width: 510px;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+			border: 1px solid gray;
+		}
+		span {
+			height: 300px;
+			transform: none;
+		}
+	}
+	.text-wrapper {
+		width: 50%;
+		h1 {
+			margin-bottom: 30px;
+			font-size: 28px;
+		}
+		.details {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 50px;
+			p {
+				margin-bottom: 10px;
+			}
+			.left-tab,
+			.right-tab {
+				width: 50%;
+			}
+		}
+		.border {
+			p {
+				// white-space: nowrap;
+				.sub-title {
+					margin-right: 20px;
+				}
+				a {
+					padding: 8px;
+					margin-right: 20px;
+					margin-bottom: 20px;
+					display: inline-block;
+					box-shadow: 0px 0px 4px 4px #7b7b7b1a;
+					font-size: 15px;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+}
+
+body.dark-mode {
+	.detail-wrapper {
+		.text-wrapper {
+			.border {
+				p {
+					a {
+						background-color: hsl(209, 23%, 22%);
+						box-shadow: 0px 0px 6px 7px $box-shadow-color-dark;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	.detail-container {
+		.back-btn-div {
+			button {
+				background-color: hsl(209, 23%, 22%);
+				box-shadow: 0px 0px 6px 7px $box-shadow-color-dark;
+				color: #fff;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.detail-container {
+		padding: 30px 50px;
+	}
+	.detail-wrapper .img-wrapper {
+		width: 42%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.detail-container {
+		padding: 30px 50px;
+	}
+	.detail-wrapper {
+		display: block;
+		.img-wrapper {
+			width: 70%;
+			margin-bottom: 50px;
+		}
+		.text-wrapper {
+			width: 100%;
+			.details {
+				display: block;
+				.left-tab {
+					width: 100%;
+					margin-bottom: 40px;
+				}
+				.right-tab {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 425px) {
+	.detail-container {
+		padding: 0 20px;
+	}
+	.detail-wrapper {
+		.img-wrapper {
+			width: 100%;
+		}
+	}
+}

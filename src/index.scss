@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap");
+
+$box-shadow-color-light: #b9b9b91a;
+$box-shadow-color-dark: #04050621;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: 0;
+	text-decoration: none;
+	background: none;
+	border: none;
+}
+a {
+	color: inherit;
+}
+button {
+	cursor: pointer;
+	font: inherit;
+}
+input {
+	font: inherit;
+}
+body {
+	margin: 0;
+	font-family: "Nunito Sans", sans-serif;
+	background-color: hsl(0, 0%, 98%);
+	color: hsl(200, 15%, 8%);
+}
+.header {
+	background-color: #fff;
+	box-shadow: 0px 6px 6px $box-shadow-color-light;
+}
+
+body.dark-mode {
+	color: #fff;
+	background-color: hsl(207, 26%, 17%);
+	.header {
+		background-color: hsl(209, 23%, 22%);
+		box-shadow: 0px 6px 6px $box-shadow-color-dark;
+	}
+}
+
+// - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+// - Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+// - Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+// - Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+// - Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+// - White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)

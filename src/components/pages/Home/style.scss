@@ -1,0 +1,28 @@
+.countries-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 65px;
+	padding: 30px 100px;
+}
+
+@media screen and (max-width: 1024px) {
+	.countries-grid {
+		padding: 30px 50px;
+		grid-gap: 40px;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.countries-grid {
+		grid-gap: 65px;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.countries-grid {
+		padding: 20px 50px;
+		grid-template-columns: 1fr;
+	}
+}
