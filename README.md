@@ -2,7 +2,7 @@
 
 #### Introduction
 
-A web site where you can view all the countries in the world as well as get detailed information on each of them. The website also has a dark/light mode based on user prefrences.
+A web site where you can view all the countries in the world as well as get detailed information on each of them. The website also has a dark/light mode feature based on user prefrences.
 
 #### Get Started
 
