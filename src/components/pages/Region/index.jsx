@@ -13,7 +13,7 @@ import SearchFilterComp from "../../SearchFilterComp";
 
 import "./style.scss";
 
-const Region = ({ match }) => {
+const Region = ({ match, history }) => {
 	useEffect(() => {
 		dispatch(fetchRegion(match.params.region));
 	}, [match?.params?.region]);
@@ -36,6 +36,11 @@ const Region = ({ match }) => {
 			behavior: "smooth",
 		});
 	}, []);
+	useEffect(() => {
+		if (regionData.error && !regionData.loading) {
+			history.replace("/404");
+		}
+	}, [regionData]);
 
 	const internationalNumberFormat = new Intl.NumberFormat("en-US");
 

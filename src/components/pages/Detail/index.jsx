@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchBorder, fetchCountry } from "../../../redux";
 import { Skeleton } from "@material-ui/lab";
@@ -48,6 +48,11 @@ const Detail = ({ match, history }) => {
 			behavior: "smooth",
 		});
 	}, []);
+	useEffect(() => {
+		if (countryData.error && !countryData.loading) {
+			history.replace("/404");
+		}
+	}, [countryData]);
 
 	console.log("lol", borders);
 

@@ -31,6 +31,14 @@ body {
 .header {
 	background-color: #fff;
 	box-shadow: 0px 6px 6px $box-shadow-color-light;
+	h3:hover {
+		color: hsl(0, 0%, 52%);
+	}
+}
+.footer {
+	background-color: #fff;
+	box-shadow: 0px -3px 6px $box-shadow-color-light;
+	padding: 20px;
 }
 
 body.dark-mode {
@@ -39,6 +47,14 @@ body.dark-mode {
 	.header {
 		background-color: hsl(209, 23%, 22%);
 		box-shadow: 0px 6px 6px $box-shadow-color-dark;
+
+		h3:hover {
+			color: hsl(0, 0%, 52%);
+		}
+	}
+	.footer {
+		background-color: hsl(209, 23%, 22%);
+		box-shadow: 0px -3px 6px $box-shadow-color-dark;
 	}
 }
 
