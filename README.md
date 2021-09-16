@@ -22,4 +22,4 @@ Open http://localhost:3000 to view it in the browser.
 
 Live demo:
 
-Afolarin's Countries Project - https://https://folacountries.netlify.app/
+Afolarin's Countries Project - https://folacountries.netlify.app
