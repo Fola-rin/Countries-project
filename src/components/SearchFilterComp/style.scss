@@ -122,6 +122,9 @@ $box-shadow-color-dark: #04050621;
 	h4 {
 		padding: 5px 0;
 		font-weight: 600;
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 }
 

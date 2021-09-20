@@ -104,23 +104,39 @@ const SearchFilterComp = () => {
 					<div className="filter-list">
 						<h4>
 							{" "}
-							<Link to={`/regions/Africa`}>Africa </Link>
+							<Link to={`/regions/Africa`} onClick={() => setFilterOpen(false)}>
+								Africa{" "}
+							</Link>
 						</h4>
 						<h4>
 							{" "}
-							<Link to={`/regions/Americas`}>Americas</Link>
+							<Link
+								to={`/regions/Americas`}
+								onClick={() => setFilterOpen(false)}
+							>
+								Americas
+							</Link>
 						</h4>
 						<h4>
 							{" "}
-							<Link to={`/regions/Asia`}>Asia </Link>
+							<Link to={`/regions/Asia`} onClick={() => setFilterOpen(false)}>
+								Asia{" "}
+							</Link>
 						</h4>
 						<h4>
 							{" "}
-							<Link to={`/regions/Europe`}>Europe </Link>
+							<Link to={`/regions/Europe`} onClick={() => setFilterOpen(false)}>
+								Europe{" "}
+							</Link>
 						</h4>
 						<h4>
 							{" "}
-							<Link to={`/regions/Oceania`}>Oceania </Link>
+							<Link
+								to={`/regions/Oceania`}
+								onClick={() => setFilterOpen(false)}
+							>
+								Oceania{" "}
+							</Link>
 						</h4>
 					</div>
 				)}
