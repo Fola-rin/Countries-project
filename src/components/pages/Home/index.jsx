@@ -4,13 +4,13 @@ import { useDispatch, useSelector } from "react-redux";
 
 import {
 	fetchAllCountries,
-	fetchCountries,
-	fetchRegion,
-	fetchCountry,
+	// fetchCountries,
+	// fetchRegion,
+	// fetchCountry,
 } from "../../../redux";
 import { CountryCard, CountryCardLoading } from "../../CountryCard";
 
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+// import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import "./style.scss";
 import SearchFilterComp from "../../SearchFilterComp";
@@ -52,7 +52,7 @@ const Home = () => {
 					allCountries.map((country, id) => (
 						<CountryCard
 							key={id}
-							imgSrc={country.flag}
+							imgSrc={country.flags[1]}
 							countryName={country.name}
 							population={internationalNumberFormat.format(country.population)}
 							region={country.region}

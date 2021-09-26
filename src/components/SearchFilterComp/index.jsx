@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useOuterClick } from "react-outer-click";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -12,7 +11,6 @@ import notfoundImg from "../../assets/notfound.png";
 import "./style.scss";
 
 import { fetchCountries } from "../../redux";
-import CountryCard from "../CountryCard";
 
 const SearchFilterComp = () => {
 	const dispatch = useDispatch();
@@ -69,7 +67,8 @@ const SearchFilterComp = () => {
 								<Skeleton />
 							</p>
 						</div>
-					) : countriesError !== "" && searchString !== "" ? (
+					) : (countriesError !== "" && searchString !== "") ||
+					  countries.data.status === 404 ? (
 						<div className="country-search">
 							<div className="img-wrapper">
 								<img src={notfoundImg} alt="" />
@@ -79,10 +78,10 @@ const SearchFilterComp = () => {
 					) : (
 						countriesData.length &&
 						searchString !== "" &&
-						countriesData.map((country) => (
-							<div className="country-search">
+						countriesData.map((country, index) => (
+							<div className="country-search" key={index}>
 								<div className="img-wrapper">
-									<img src={country.flag} alt={"flag of " + country.name} />
+									<img src={country.flags[1]} alt={"flag of " + country.name} />
 								</div>
 								<p>{country.name} </p>{" "}
 								<Link to={`/countries/${country.name}`} />

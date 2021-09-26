@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchBorder, fetchCountry } from "../../../redux";
 import { Skeleton } from "@material-ui/lab";
@@ -12,7 +12,7 @@ const Detail = ({ match, history }) => {
 	console.log(history);
 
 	const [countryInfo, setCountryInfo] = useState({});
-	const [borderCountries, setBorderCountries] = useState([]);
+	// const [borderCountries, setBorderCountries] = useState([]);
 
 	const dispatch = useDispatch();
 
@@ -134,7 +134,7 @@ const Detail = ({ match, history }) => {
 						<div className="detail-wrapper">
 							<div className="img-wrapper">
 								<img
-									src={countryInfo.flag}
+									src={countryInfo.flags && countryInfo.flags[1]}
 									alt={`The Flag of ${countryInfo.name}`}
 								/>
 							</div>

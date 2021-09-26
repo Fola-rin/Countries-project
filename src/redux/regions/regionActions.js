@@ -28,7 +28,7 @@ export const fetchRegion = (region) => {
 	return (dispatch) => {
 		dispatch(fetchRegionRequest());
 		axios
-			.get(`https://restcountries.eu/rest/v2/region/${region}`)
+			.get(`https://restcountries.com/v2/continent/${region}`)
 			.then((response) => {
 				dispatch(fetchRegionSuccess(response.data));
 			})

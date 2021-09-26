@@ -30,7 +30,7 @@ export const fetchBorder = (code) => {
 			.all(
 				code &&
 					code.map((code) =>
-						axios.get(`https://restcountries.eu/rest/v2/alpha/${code}`)
+						axios.get(`https://restcountries.com/v2/alpha/${code}`)
 					)
 			)
 

@@ -27,9 +27,7 @@ export const fetchCountry = (name) => {
 	return (dispatch) => {
 		dispatch(fetchCountryRequest());
 		axios
-			.get(
-				`https://restcountries.eu/rest/v2/name/${name}?fullText=true`
-			)
+			.get(`https://restcountries.com/v2/name/${name}?fullText=true`)
 			.then((response) => {
 				dispatch(fetchCountrySuccess(response.data));
 			})
@@ -40,5 +38,3 @@ export const fetchCountry = (name) => {
 			});
 	};
 };
-
-

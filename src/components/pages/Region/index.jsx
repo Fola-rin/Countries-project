@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 
 import {
-	fetchAllCountries,
-	fetchCountries,
+	// fetchAllCountries,
+	// fetchCountries,
 	fetchRegion,
-	fetchCountry,
+	// fetchCountry,
 } from "../../../redux";
 import { CountryCardLoading, CountryCard } from "../../CountryCard";
 import SearchFilterComp from "../../SearchFilterComp";
@@ -18,7 +18,7 @@ const Region = ({ match, history }) => {
 		dispatch(fetchRegion(match.params.region));
 	}, [match?.params?.region]);
 
-	const [loading, setLoading] = useState(true);
+	// const [loading, setLoading] = useState(true);
 
 	const regionData = useSelector((state) => state.region);
 
@@ -62,7 +62,7 @@ const Region = ({ match, history }) => {
 					region.map((country, id) => (
 						<CountryCard
 							key={id}
-							imgSrc={country.flag}
+							imgSrc={country.flags[1]}
 							countryName={country.name}
 							population={internationalNumberFormat.format(country.population)}
 							region={country.region}
