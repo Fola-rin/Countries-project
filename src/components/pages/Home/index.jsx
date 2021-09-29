@@ -52,7 +52,7 @@ const Home = () => {
 					allCountries.map((country, id) => (
 						<CountryCard
 							key={id}
-							imgSrc={country.flags[1]}
+							imgSrc={country.flag}
 							countryName={country.name}
 							population={internationalNumberFormat.format(country.population)}
 							region={country.region}

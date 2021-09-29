@@ -81,7 +81,7 @@ const SearchFilterComp = () => {
 						countriesData.map((country, index) => (
 							<div className="country-search" key={index}>
 								<div className="img-wrapper">
-									<img src={country.flags[1]} alt={"flag of " + country.name} />
+									<img src={country.flag} alt={"flag of " + country.name} />
 								</div>
 								<p>{country.name} </p>{" "}
 								<Link to={`/countries/${country.name}`} />

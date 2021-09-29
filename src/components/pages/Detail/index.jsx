@@ -134,7 +134,7 @@ const Detail = ({ match, history }) => {
 						<div className="detail-wrapper">
 							<div className="img-wrapper">
 								<img
-									src={countryInfo.flags && countryInfo.flags[1]}
+									src={countryInfo.flag}
 									alt={`The Flag of ${countryInfo.name}`}
 								/>
 							</div>
